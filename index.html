@@ -15,126 +15,122 @@
   </head>
   <body>
     <header class="navbar navbar-dark bg-dark p-0 flex-nowrap fixed-top shadow">
-      <a class="navbar-brand col-2 mr-0" href="#">Super Calculadora</a>
-      <div class="row">
-        <input class="form-control form-control-light col-sm-4 offset-sm-2" type="text" placeholder="Número 1 (A)" aria-label="Número 1 (A)">
-        <input class="form-control form-control-light col-sm-4 offset-sm-2" type="text" placeholder="Número 2 (B)" aria-label="Número 2 (B)">
-      </div>
-      <div class="navbar-nav px-3">
-        <button type="button" class="btn btn-outline-primary">Calcular</button>
-      </div>
+      <a class="navbar-brand p-2" href="#">Super Calculadora Bootcamp Desenvolvedor Front End IGTI</a>
     </header>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12 mt-5">
-          <h1 class="display-5">Cálculos</h1>
+    <section class="calculadora-cards">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mt-5">
+            <h3 class="display-5">Digite 2 números (inteiros ou decimais separados por ponto)</h3>
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <input type="text" class="form-control" id="inputNumero1" placeholder="Número A (Ex.: 9 ou 9.9)">
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="text" class="form-control" id="inputNumero2" placeholder="Número B (Ex.: 9 ou 9.9)">
+                </div>
+                <div class="form-group col-md-4">
+                  <input class="btn btn-outline-primary text-right" type="submit" value="Calcular">
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+  
+        <div class="row card-deck text-center">
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Soma A + B</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoSoma">Resultado da soma A + B</h4>
+            </div>
+          </div>
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Subtração 1 (A - B)</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoSub1">Resultado da subtração A - B</h4>
+            </div>
+          </div>
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Subtração 2 (B - A)</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoSub2">Resultado da subtração B - A</h4>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row card-deck text-center">
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Multiplicação A * B</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoMultiplicacao">Resultado da Multiplicação</h4>
+            </div>
+          </div>
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Divisão 1 (A / B)</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoDiv1">Resultado da divisão</h4>
+            </div>
+          </div>
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Divisão 2 (B / A)</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoDiv2">Resultado da divisão</h4>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row card-deck text-center">
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Quadrado de A (A<sup>2</sup>)</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoQuadradoA">Resultado do quadrado</h4>
+            </div>
+          </div>
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Quadrado de B (B<sup>2</sup>)</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoQuadradoB">Resultado do quadrado</h4>
+            </div>
+          </div>
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Divisores Inteiros de A</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoDivIntA">Resultado dos divisores inteiros</h4>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row card-deck text-center">
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Divisores Inteiros de B</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoDivIntB">Resultado dos divisores inteiros</h4>
+            </div>
+          </div>
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Fatorial de A</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoFatA">Resultado do fatorial</h4>
+            </div>
+          </div>
+          <div class="card border-dark mb-3 col-sm-4">
+            <div class="card-header">Fatorial de B</div>
+            <div class="card-body text-dark">
+              <h4 class="card-title" id="resultadoFatB">Resultado do fatorial</h4>
+            </div>
+          </div>
+        </div>
+  
       </div>
-
-      <div class="row card-deck text-center">
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Soma A + B</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoSoma">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Subtração 1 (A - B)</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoSub1">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Subtração 2 (B - A)</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoSub2">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row card-deck text-center">
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Multiplicação A * B</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoMultiplicacao">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Divisão 1 (A / B)</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoDiv1">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Divisão 2 (B / A)</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoDiv2">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row card-deck text-center">
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Quadrado de A (A<sup>2</sup>)</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoQuadradoA">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Quadrado de B (B<sup>2</sup>)</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoQuadradoB">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Divisores Inteiros de A</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoDivIntA">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row card-deck text-center">
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Divisores Inteiros de B</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoDivIntB">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Fatorial de A</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoFatA">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-        <div class="card border-dark mb-3 col-sm-4">
-          <div class="card-header">Fatorial de B</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title" id="resultadoFatB">Título de Card Dark</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    </section>
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
     <!-- Scripts adicionais-->
-    <script defer src="js/calculadora.js"></script>
+    <script src="js/calculadora.js"></script>
   </body>
 </html>
