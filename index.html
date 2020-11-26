@@ -23,7 +23,7 @@
         <div class="row">
           <div class="col-12 mt-5">
             <h3 class="display-5">Digite 2 números (inteiros ou decimais separados por ponto)</h3>
-            <form>
+            <!-- <form>
               <div class="form-row">
                 <div class="form-group col-md-4">
                   <input type="text" class="form-control" id="inputNumero1" placeholder="Número A (Ex.: 9 ou 9.9)">
@@ -35,7 +35,18 @@
                   <input class="btn btn-outline-primary text-right" type="submit" value="Calcular">
                 </div>
               </div>
-            </form>
+            </form> -->
+          <form class="form-inline">
+            <div class="form-group mb-4">
+              <label for="inputNumero1" class="col-sm-4 col-form-label">Número A:</label>
+              <input type="text" class="form-control col-sm-8" id="inputNumero1" placeholder="Número A (Ex.: 9 ou 9.9)">
+            </div>
+            <div class="form-group mx-sm-3 mb-4">
+              <label for="inputNumero2" class="col-sm-4 col-form-label">Número B:</label>
+              <input type="text" class="form-control col-sm-8" id="inputNumero2" placeholder="Número B (Ex.: 9 ou 9.9)">
+            </div>
+            <button type="submit" class="btn btn-outline-primary mx-sm-3 mb-4">Calcular</button>
+          </form>
           </div>
         </div>
   
